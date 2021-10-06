@@ -1,9 +1,9 @@
 #include <sys/types.h>
 #include <sys/syscall.h>
 #include <unistd.h>
-#include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 static int
 pidfd_open(pid_t pid, unsigned int flags)
@@ -42,7 +42,7 @@ main(int argc, char *argv[])
     }
 
     printf("write\n");
-    ret = write(sfd, argv[3], sizeof(argv[3])-1);
+    ret = write(sfd, argv[3], strlen(argv[3]));
     if (ret == -1) {
         perror("write error");
         exit(EXIT_FAILURE);
