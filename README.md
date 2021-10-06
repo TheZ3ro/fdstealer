@@ -9,7 +9,7 @@ gcc fdstealer.c -o fdstealer
 
 ### why?
 
-> As of 2020, you cannot do that (or anything similar) if /proc/<pid>/fd/<fd> is a socket.
+> As of 2020, you cannot do that (or anything similar) if /proc/\*/fd/\* is a socket.
   
 https://unix.stackexchange.com/a/613450
 
