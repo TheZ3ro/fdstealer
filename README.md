@@ -21,6 +21,13 @@ So I wanted to try out some Linux syscalls, namely:
 **write** - write to a file descriptor
 
 
+### Ptrace
+
+Permission to duplicate another process's file descriptor is  
+governed by a ptrace access mode `PTRACE_MODE_ATTACH_REALCREDS`
+check (see `ptrace(2)`).
+
+
 ### Yama - Linux Security Module
 
 Modern Linux distributions include or enable the [**Yama** security module](https://www.kernel.org/doc/Documentation/security/Yama.txt).  
